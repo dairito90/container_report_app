@@ -7,23 +7,32 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 </head>
 
-<body class="container">
-    <div ng-controller="ContainerReportCtrl as Containers">
-        <h1>Company</h1>
-        <input type="text" ng-model="Company">
-        <h1>Container#</h1>
-        <input type="text" ng-model="Container#">
-        <h1>Arrival Date</h1>
-        <input type="text" ng-model="Arrival Date">
-        <h1>Departure Day</h1>
-        <input type="text" ng-model="Departure Day">
-        <h1>Number of Pieces</h1>
-        <input type="text" ng-model="# of Pieces">
-
+<body >
+    <div ng-app="ContainerApp" ng-controller="ContainerReportCtrl as Containers">
+        <h4>Company</h4>
+        <input type="text" ng-model="company">
+        <h4>Container Number</h4>
+        <input type="text" ng-model="container#">
+        <h4>Arrival Date</h4>
+        <input type="text" ng-model="arrivaldate">
+        <h4>Departure Day</h4>
+        <input type="text" ng-model="departureday">
+        <h4>Number of Pieces</h4>
+        <input type="text" ng-model="numberofpieces">
+        <table>
+            <tr ng-repeat="item in items">
+                <td>{{item.company}}</td>
+                <td>{{item.cotainernumber}}</td>
+                <td>{{item.arrivaldate}}</td>
+                <td>{{item.departureday}}</td>
+                <td>{{item.numberofpieces}}</td>
+            </tr>
+            <button ng-click="handleclick()" type="button" name="button">Add</button>
+        </table>
     </div>
     </div>
 
-    <script src="bower_components/angular/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
     <script src="Js/main.js"></script>
 </body>
 
