@@ -1,0 +1,38 @@
+body {
+    background-image: url(../containercargo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+td {
+    padding: 10px 20px;
+    border: 2px solid #ccc;
+    color:#fff;
+    font-size: 10px;
+    font-family: verdana;
+}
+
+#btn {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+#info {
+    text-align: center;
+    margin-top: 350px;
+    
+}
+
+h2 {
+    color: #fff;
+    font-style: italic;
+    font-family: monospace;
+}
+
+.table-info {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}

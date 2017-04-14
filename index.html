@@ -5,32 +5,36 @@
     <meta charset="UTF-8">
     <title>Container Report</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body >
-    <div ng-app="ContainerApp" ng-controller="ContainerReportCtrl as Containers">
-        <h4>Company</h4>
+<body>
+    <div  id="info" ng-app="ContainerApp" ng-controller="ContainerReportCtrl as Containers">
+        <h2>Company</h2>
         <input type="text" ng-model="company">
-        <h4>Container Number</h4>
-        <input type="text" ng-model="container#">
-        <h4>Arrival Date</h4>
+        <h2>Container Number</h2>
+        <input type="text" ng-model="containernumber">
+        <h2>Arrival Date</h2>
         <input type="text" ng-model="arrivaldate">
-        <h4>Departure Day</h4>
+        <h2>Departure Day</h2>
         <input type="text" ng-model="departureday">
-        <h4>Number of Pieces</h4>
+        <h2>Number of Pieces</h2>
         <input type="text" ng-model="numberofpieces">
-        <table>
+
+        <table class="table-info">
             <tr ng-repeat="item in items">
                 <td>{{item.company}}</td>
-                <td>{{item.cotainernumber}}</td>
+                <td>{{item.containernumber}}</td>
                 <td>{{item.arrivaldate}}</td>
                 <td>{{item.departureday}}</td>
                 <td>{{item.numberofpieces}}</td>
             </tr>
-            <button ng-click="handleclick()" type="button" name="button">Add</button>
+            <button id="btn" class=""w3-btn w3-round-xxlarge"" ng-click="handleclick()" type="button" name="button">ADD</button>
         </table>
+
     </div>
-    </div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
     <script src="Js/main.js"></script>

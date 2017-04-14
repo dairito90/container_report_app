@@ -5,7 +5,7 @@ app.controller('ContainerReportCtrl', ['$scope',function($scope){
  // $scope.arrivaldate= '';
  // $scope.departureday= '';
  // $scope.numberofpieces= '';
-  var items=[];
+$scope.items=[];
  $scope.handleclick=function(){
      console.log("hi");
      var item= {
